@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* ------------------ GLOBAL DEFAULT FONT = INTER ------------------ */
+html, body, .main, .block-container,
+[data-testid="stMarkdownContainer"] *, .stText, .stMarkdown, .stHeader, .stCaption {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* ------------------ POST TITLE = EB GARAMOND ------------------ */
+h1, .stTitle {
+    font-family: 'EB Garamond', serif !important;
+    font-weight: 400 !important;
+    font-size: 2.4rem !important;
+    margin-bottom: 0.7em;
+}
+
+/* ------------------ SIDEBAR TEXT = EB GARAMOND ------------------ */
+section[data-testid="stSidebar"] {
+    color: white !important;
+}
+
+section[data-testid="stSidebar"] *:not(svg):not(path):not([class^="css-"]):not([data-testid="stSidebarNav"]):not([data-testid="stIconMaterial"]) {
+    font-family: 'EB Garamond', serif !important;
+}
+
+
+/* ------------------ SIDEBAR BACKGROUND IMAGE ------------------ */
+section[data-testid="stSidebar"] {
+    background-image: url({{SIDEBAR_BG}});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ------------------ READ MORE BUTTON TEXT = EB GARAMOND ------------------ */
+button[data-testid="stBaseButton-secondary"] * {
+    font-family: 'EB Garamond', serif !important;
+}
+
+/* ------Top css------ */
+/*reduce top padding*/
+.block-container {          
+    padding-top: 3rem;
+} 
+/*reduce gap between lines in main area*/ 
+.stVerticalBlock {          
+    gap: 9px !important;
+}
+/*hide top bar*/
+/* .stAppHeader {
+    display: none !important;
+} */
+
+/* ------Sidebar Button Styling------ */
+section[data-testid="stSidebar"] button {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0px !important;
+    background-color: transparent !important;
+    border: none !important;
+    text-align: left !important;
+    padding: 1px 6px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    color: white !important;
+    justify-content: flex-start !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Remove all spacing from button containers */
+section[data-testid="stSidebar"] [data-testid="stVerticalBlock"],
+section[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div,
+section[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div > div,
+section[data-testid="stSidebar"] * {
+    margin: 0px !important;
+    padding: 0px !important;
+    gap: 0px !important;
+}
+
+/* Hover effect for sidebar buttons */
+section[data-testid="stSidebar"] button:hover {
+    background-color: rgba(31, 124, 96, 0.2) !important;
+    color: #ffffff !important;
+    transform: translateX(2px);
+    font-size: 16px;
+    border: none !important;
+}
+
+/* Active/clicked sidebar button styling */
+section[data-testid="stSidebar"] .active-btn button {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background-color: rgba(92, 198, 167, 0.3) !important;
+    color: #ffffff !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    text-align: left !important;
+    transform: translateX(2px);
+}
+
+/* ------horizontal lines------- */
+.stMarkdown hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* -------Read more Button------ */
+button[data-testid="stBaseButton-secondary"] {
+    padding: 0 6px !important;
+}
+
+button[data-testid="stBaseButton-secondary"]:hover,
+button[data-testid="stBaseButton-secondary"]:active,
+button[data-testid="stBaseButton-secondary"]:focus {
+    background-color: white !important;
+    color: #5cc6a7 !important;
+    border: 2px solid #5cc6a7 !important;
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* --- Heading Styles --- */
+h2 {
+    font-family: 'EB Garamond', serif !important;
+    font-weight: 400 !important;
+    font-size: 30px !important;
+    margin-bottom: 0.5em;
+}
+h3 {
+    font-family: 'EB Garamond', serif !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    margin-bottom: 0.5em;
+}
+
+/* --- h4 as Highlight --- */
+h4 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    background-color: #fff3cd !important;
+    padding: 2px 8px !important;
+    border-radius: 3px !important;
+    font-weight: 400 !important;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+/* --- h5 as Quote --- */
+h5 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    border-left: 4px solid #5cc6a7 !important;
+    padding-left: 16px !important;
+    font-style: italic !important;
+    color: #666 !important;
+    margin-bottom: 0.5em;
+    font-weight: 400 !important;
+}
+
+/* --- h6 as Code Inline --- */
+h6 {
+    font-family: 'Courier New', monospace !important;
+    font-size: 1rem !important;
+    background-color: #d5e8fd !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    display: inline-block;
+    font-weight: 400 !important;
+    margin-bottom: 0.5em;
+}
+
+/* 
+# Main Heading
+## Heading
+### Subheading
+#### Highlighted text
+##### Quoted text
+###### Inline code style */
